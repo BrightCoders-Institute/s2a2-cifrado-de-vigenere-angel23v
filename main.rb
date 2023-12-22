@@ -68,5 +68,5 @@ class Cifrado
   end
 end
 
-g = Cifrado.new('zk', 'zwy')
+g = Cifrado.new
 g.display_encrypt

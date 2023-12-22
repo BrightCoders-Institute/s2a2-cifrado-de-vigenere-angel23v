@@ -10,6 +10,7 @@ class TestCifradoVigenere < Minitest::Test
     @cifrado_key = Cifrado.new('angel', 'celular')
     @cifrado_msg = Cifrado.new('rubyonrails', 'gema')
     @cifrado_word = Cifrado.new('java script', 'node js')
+    @cifrado_default = Cifrado.new
   end
 
   def test_encrypt_word
@@ -26,5 +27,9 @@ class TestCifradoVigenere < Minitest::Test
 
   def test_more_than_one_word
     assert_equal 'WOYEBUEWSX', @cifrado_word.display_encrypt
+  end
+
+  def test_without_msgs
+    assert_equal 'A', @cifrado_default.display_encrypt
   end
 end
